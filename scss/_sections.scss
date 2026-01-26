@@ -1,0 +1,114 @@
+section {
+    padding: 60px 40px;
+    background-color: $blanco;
+    margin-bottom: 20px;
+
+    h2 {
+        color: $color-primario;
+        margin-bottom: 20px;
+    }
+}
+
+.presentacion{
+    text-align: center;
+    padding: 80px 40px;
+
+    p{
+        color: #555;
+        font-size: 18px;
+    }
+}
+
+.especialidades {
+    background-color: $blanco;
+    h2{
+        color: $color-primario;
+    }
+    .especialidad-card{
+        background-color: $color-secundario;
+        padding: 25px 15px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        border-left: 4px solid $color-primario;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+
+        &:hover {
+        background-color: lighten($color-secundario, 3%);
+        transform: translateY(-4px);
+        }
+    }
+}
+
+.abogada{
+    background-color: $blanco;
+    h2{
+        color: $color-primario;
+        margin-bottom: 10px;
+    }
+
+    &_foto{
+        max-width: 220px;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    &_matricula{
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: 16px;
+    }
+}
+
+
+.login-body{
+    background-color: $color-secundario;
+}
+
+.login-card{
+    background: $blanco;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+
+    h2{
+        color: $color-primario;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .btn-primary{
+        background-color: $color-primario;
+        border-color: $color-primario;
+        
+        &:hover{
+            background-color: darken($color-primario, 8%);
+            border-color: darken($color-primario, 8%);
+        }
+    }
+}
+
+.dashboard{
+    height: 100vh;
+}
+
+.sidebar{
+    width: 220px;
+    .nav-link{
+        font-size: 15px;
+        padding: 8px 0;
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+    }
+}
+
+.content{
+    background-color: $color-secundario;
+}

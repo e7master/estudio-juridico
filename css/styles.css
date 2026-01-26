@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f4f6f8;
+  color: #1a1a1a;
+  line-height: 1.6;
+  padding-top: 80px;
+}
+
+h1, h2, h3{
+  font-family: "Playfair Display", serif;
+}
+
+.header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  font-size: 22px;
+}
+.header .navbar-brand {
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+}
+.header .nav-link {
+  font-size: 0.97rem;
+  font-weight: 500;
+  color: #333;
+  transition: 0.3s ease;
+}
+.header .nav-link:hover {
+  color: #0d6efd; /* celeste Bootstrap */
+}
+.header html {
+  scroll-behavior: smooth;
+}
+.header body {
+  padding-top: 80px; /* por el nav fijo */
+}
+
+section {
+  padding: 60px 40px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+}
+section h2 {
+  color: #1f2a38;
+  margin-bottom: 20px;
+}
+
+.hero{
+  background: url(../medios/estudio-juridico.jpg) center/cover no-repeat;
+  background-color: #1a2b4c;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  color: white;
+  text-align: center;
+ 
+}
+
+.hero .lead{
+  font-weight: 300;
+  opacity: .9;
+}
+
+.hero .btn-primary{
+  background-color: #0d6efd;
+  border: none;
+}
+
+.hero .btn-outline-light{
+  border-color: white;
+  color: white;
+}
+
+.hero .btn-outline-light:hover{
+  background: white;
+  color: #1a2b4c;
+}
+
+.presentacion {
+  text-align: center;
+  padding: 80px 40px;
+}
+.presentacion p {
+  color: #555;
+  font-size: 18px;
+}
+
+.especialidades {
+  background-color: #ffffff;
+}
+.especialidades h2 {
+  color: #1f2a38;
+}
+.especialidades .especialidad-card {
+  background-color: #f4f6f8;
+  padding: 25px 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  border-left: 4px solid #1f2a38;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.especialidades .especialidad-card:hover {
+  background-color: rgb(253.35, 253.65, 253.95);
+  transform: translateY(-4px);
+}
+
+.abogada {
+  background-color: #ffffff;
+}
+.abogada h2 {
+  color: #1f2a38;
+  margin-bottom: 10px;
+}
+.abogada_foto {
+  max-width: 220px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.abogada_matricula {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.abogada p {
+  font-size: 16px;
+}
+
+.login-body {
+  background-color: #f4f6f8;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+.login-card h2 {
+  color: #1f2a38;
+  font-size: 22px;
+  font-weight: 600;
+}
+.login-card .btn-primary {
+  background-color: #1f2a38;
+  border-color: #1f2a38;
+}
+.login-card .btn-primary:hover {
+  background-color: rgb(16.4620689655, 22.3034482759, 29.7379310345);
+  border-color: rgb(16.4620689655, 22.3034482759, 29.7379310345);
+}
+
+.dashboard {
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+}
+.sidebar .nav-link {
+  font-size: 15px;
+  padding: 8px 0;
+}
+.sidebar .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.content {
+  background-color: #f4f6f8;
+}
+
+.btn-wsp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+}
+
+.btn-wsp img {
+  width: 100%;
+}
+
+.footer {
+  background-color: #1f2a38;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}/*# sourceMappingURL=styles.css.map */
