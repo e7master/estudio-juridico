@@ -1,5 +1,22 @@
-@import '_variables';
-@import '_base';
-@import '_header';
-@import '_sections';
-@import '_footer';
+//Variables + mixins
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+//Base
+@import './base/reset';
+@import './base/global';
+@import './base/typography';
+
+//Layout
+@import './layout/navbar';
+@import './layout/hero';
+@import './layout/sections';
+@import './layout/footer';
+
+//Componentes
+@import './components/cards';
+@import './components/buttons';
+@import './components/forms';
+@import './components/whatsapp';
+
+@import './utils/decor';

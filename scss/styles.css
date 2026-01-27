@@ -1,158 +1,222 @@
-* {
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
+  font-family: "Lato", sans-serif;
+  background-color: #f8f9fa;
+  color: #1a1a1a;
+  line-height: 1.5;
+  text-align: justify;
 }
 
-.header {
-  background-color: #1f2a38;
-  color: #ffffff;
-  padding: 20px 40px;
+h1, h2, h3, h4, h5 {
+  font-family: "Playfair Display", serif;
+}
+
+.navbar {
+  background-color: #0a162f !important;
+}
+
+.navbar-brand {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  font-weight: 700;
+  color: #f8f9fa;
 }
-.header h1 {
-  font-size: 22px;
-}
-.header .navbar-brand {
-  font-size: 1.3rem;
-  letter-spacing: 0.5px;
-  color: #1a1a1a !important;
-}
-.header .nav-link {
-  font-size: 0.97rem;
-  font-weight: 500;
-  color: #333 !important;
-  transition: 0.3s ease;
-}
-.header .nav-link:hover {
-  color: #0d6efd !important; /* celeste Bootstrap */
-}
-.header html {
-  scroll-behavior: smooth;
-}
-.header body {
-  padding-top: 80px; /* por el nav fijo */
+.navbar-brand img {
+  height: 80px;
+  margin-right: 0.5rem;
 }
 
-section {
-  padding: 60px 40px;
-  background-color: #ffffff;
-  margin-bottom: 20px;
+.nav-link {
+  color: #f8f9fa;
+  opacity: 0.9;
+  transition: 0.3s;
 }
-section h2 {
-  color: #1f2a38;
-  margin-bottom: 20px;
+.nav-link:hover {
+  opacity: 1;
+}
+
+.hero {
+  position: relative;
+  background: url("../medios/estudio-juridico.jpg") center/cover no-repeat;
+  background-position: center 15%;
+  color: #f8f9fa;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.55) 35%, rgba(0, 0, 0, 0.35) 100%);
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+.hero h1, .hero h2 {
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .presentacion {
   text-align: center;
-  padding: 80px 40px;
-}
-.presentacion p {
-  color: #555;
-  font-size: 18px;
-}
-
-.especialidades {
-  background-color: #ffffff;
-}
-.especialidades h2 {
-  color: #1f2a38;
-}
-.especialidades .especialidad-card {
-  background-color: #f4f6f8;
-  padding: 25px 15px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  border-left: 4px solid #1f2a38;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.especialidades .especialidad-card:hover {
-  background-color: rgb(253.35, 253.65, 253.95);
-  transform: translateY(-4px);
+  background: #f8f9fa;
 }
 
 .abogada {
-  background-color: #ffffff;
+  background: #f8f9fa;
 }
-.abogada h2 {
-  color: #1f2a38;
-  margin-bottom: 10px;
-}
-.abogada_foto {
-  max-width: 220px;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.abogada_matricula {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 15px;
-}
-.abogada p {
-  font-size: 16px;
+.abogada .abogada_matricula {
+  font-weight: 700;
+  color: #0a162f;
 }
 
-.login-body {
-  background-color: #f4f6f8;
+.especialidades {
+  background: #f8f9fa;
 }
 
-.login-card {
-  background: #ffffff;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 400px;
-}
-.login-card h2 {
-  color: #1f2a38;
-  font-size: 22px;
-  font-weight: 600;
-}
-.login-card .btn-primary {
-  background-color: #1f2a38;
-  border-color: #1f2a38;
-}
-.login-card .btn-primary:hover {
-  background-color: rgb(16.4620689655, 22.3034482759, 29.7379310345);
-  border-color: rgb(16.4620689655, 22.3034482759, 29.7379310345);
+.equipo {
+  background: #f8f9fa;
 }
 
-.dashboard {
-  height: 100vh;
+.estudio {
+  background: #f8f9fa;
 }
 
-.sidebar {
-  width: 220px;
-}
-.sidebar .nav-link {
-  font-size: 15px;
-  padding: 8px 0;
-}
-.sidebar .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-.content {
-  background-color: #f4f6f8;
+.contacto {
+  background: #f8f9fa;
+  text-align: center;
 }
 
 .footer {
-  background-color: #1f2a38;
-  color: #ffffff;
+  background: #0a162f;
+  color: #f8f9fa;
+  padding: 1rem 0;
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
+}
+
+.especialidad-card {
+  background: #ffffff;
+  padding: 1.2rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: default;
+}
+.especialidad-card:hover {
+  border-color: #c5a059;
+  color: #c5a059;
+}
+
+.btn-primary {
+  background-color: #0a162f;
+  border-color: #0a162f;
+}
+.btn-primary:hover {
+  background-color: rgb(1.0526315789, 2.3157894737, 4.9473684211);
+  border-color: rgb(1.0526315789, 2.3157894737, 4.9473684211);
+}
+
+.btn-outline-light {
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+}
+.btn-outline-light:hover {
+  background-color: #f8f9fa;
+  color: #0a162f;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+form .form-control {
+  border-radius: 0.4rem;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+form button {
+  margin-top: 1rem;
+}
+
+.btn-wsp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-wsp img {
+  width: 35px;
+}
+
+section h2 {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+section h2::before,
+section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 180px;
+  height: 4px;
+  background-color: #c5a059;
+  transform: translateX(-50%);
+}
+
+section h2::before {
+  top: 8px;
+}
+
+section h2::after {
+  bottom: 0px;
+}
+
+/* Altura del navbar (ajustable si cambiás el logo) */
+:root {
+  --nav-height: 110px;
+}
+
+html {
+  scroll-padding-top: var(--nav-height);
+}
+
+.justificar {
+  text-align: justify;
+}
+
+/* Versión mobile */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 90px;
+  }
 }/*# sourceMappingURL=styles.css.map */

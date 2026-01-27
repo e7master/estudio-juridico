@@ -1,0 +1,14 @@
+form{
+    max-width: 600px;
+    margin: 0 auto;
+
+    .form-control{
+        border-radius: .4rem;
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    button{
+        margin-top: 1rem;
+    }
+}

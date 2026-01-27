@@ -1,0 +1,25 @@
+.navbar{
+    background-color: $color-primario !important;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: $light;
+
+    img {
+        height: 80px;
+        margin-right: .5rem;
+    }
+}
+
+.nav-link{
+    color: $light;
+    opacity: .9;
+    transition: .3s;
+
+    &:hover{
+        opacity: 1;
+    }
+}

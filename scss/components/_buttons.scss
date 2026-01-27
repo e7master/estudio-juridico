@@ -1,0 +1,19 @@
+.btn-primary{
+    background-color: $color-primario;
+    border-color: $color-primario;
+
+    &:hover{
+        background-color: darken($color-primario, 10%);
+        border-color: darken($color-primario, 10%);
+    }
+}
+
+.btn-outline-light{
+    border-color: $light;
+    color: $light;
+
+    &:hover{
+        background-color: $light;
+        color: $color-primario;
+    }
+}

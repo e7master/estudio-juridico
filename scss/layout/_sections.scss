@@ -1,0 +1,28 @@
+.presentacion{
+    text-align: center;
+    background: $light;
+}
+
+.abogada{
+    background: $light;
+
+    .abogada_matricula{
+        font-weight: 700;
+        color: $color-primario;
+    }
+}
+
+.especialidades{
+    background: $light;
+}
+.equipo{
+    background: $light;
+}
+.estudio{
+    background: $light;
+}
+
+.contacto{
+    background: $light;
+    text-align: center;
+}

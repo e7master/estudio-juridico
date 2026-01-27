@@ -1,0 +1,15 @@
+.especialidad-card{
+    background: $blanco;
+    padding: 1.2rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    font-weight: 600;
+    transition: .3s;
+    cursor: default;
+
+    &:hover{
+        border-color: $color-secundario;
+        color: $color-secundario;
+    }
+}

@@ -1,0 +1,46 @@
+section h2 {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+section h2::before,
+section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 180px;
+  height: 4px;
+  background-color: $color-secundario; // lo tenés en variables
+  transform: translateX(-50%);
+}
+
+section h2::before {
+  top: 8px;
+}
+
+section h2::after {
+  bottom: 0px;
+}
+
+/* Altura del navbar (ajustable si cambiás el logo) */
+:root {
+  --nav-height: 110px;
+}
+
+html {
+  scroll-padding-top: var(--nav-height);
+}
+
+.justificar{
+    text-align: justify;
+}
+
+/* Versión mobile */
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 90px;
+  }
+}

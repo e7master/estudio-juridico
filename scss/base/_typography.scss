@@ -1,0 +1,12 @@
+body{
+    font-family: $fuente-cuerpo;
+    background-color: $body-bg;
+    color: $color-texto;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: $fuente-heading;
+}
+

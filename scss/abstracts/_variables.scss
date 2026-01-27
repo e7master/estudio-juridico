@@ -1,0 +1,20 @@
+//Colores
+$color-primario: #0a162f;
+$color-secundario: #c5a059;
+$light: #f8f9fa;
+$oscuro: #1a1a1a;
+$body-bg: $light;
+$color-texto: $oscuro;
+$blanco: #ffffff;
+
+//Bootstrap color
+$theme-colors: (
+    "primario": $color-primario,
+    "secundario": $color-secundario,
+    "light": $light,
+    "dark": $oscuro
+);
+
+//Tipografia
+$fuente-cuerpo: 'Lato', sans-serif;
+$fuente-heading: 'Playfair Display', serif;
