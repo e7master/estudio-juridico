@@ -25,6 +25,15 @@ section h2::after {
   bottom: 0px;
 }
 
+.seccionDra{
+  margin-bottom: 0.5rem !important;
+}
+
+.seccionDra::before, 
+.seccionDra::after{
+  display: none !important;
+}
+
 /* Altura del navbar (ajustable si cambiás el logo) */
 :root {
   --nav-height: 110px;

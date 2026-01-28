@@ -9,7 +9,8 @@
     color: $light;
 
     img {
-        height: 80px;
+        height: 100px;
+        width: 140px;
         margin-right: .5rem;
     }
 }
@@ -18,8 +19,16 @@
     color: $light;
     opacity: .9;
     transition: .3s;
-
+    font-size: 1.2rem;
+    
     &:hover{
         opacity: 1;
     }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    background-position: center 35%;
+    min-height: 60vh;
+  }
 }

@@ -14,7 +14,7 @@ img {
 
 body {
   font-family: "Lato", sans-serif;
-  background-color: #f8f9fa;
+  background-color: #d7e3f4;
   color: #1a1a1a;
   line-height: 1.5;
 }
@@ -24,39 +24,49 @@ h1, h2, h3, h4, h5 {
 }
 
 .navbar {
-  background-color: #0a162f !important;
+  background-color: #1e4fb2 !important;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
   font-weight: 700;
-  color: #f8f9fa;
+  color: #d7e3f4;
 }
 .navbar-brand img {
-  height: 80px;
+  height: 100px;
+  width: 140px;
   margin-right: 0.5rem;
 }
 
 .nav-link {
-  color: #f8f9fa;
+  color: #d7e3f4;
   opacity: 0.9;
   transition: 0.3s;
+  font-size: 1.2rem;
 }
 .nav-link:hover {
   opacity: 1;
 }
 
+@media (max-width: 576px) {
+  .hero {
+    background-position: center 35%;
+    min-height: 60vh;
+  }
+}
 .hero {
   position: relative;
   background: url("../medios/estudio-juridico.jpg") center/cover no-repeat;
   background-position: center 15%;
-  color: #f8f9fa;
+  color: #d7e3f4;
   min-height: 80vh;
   display: flex;
   align-items: center;
   text-align: center;
   margin-bottom: 3rem;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .hero::after {
   content: "";
@@ -75,37 +85,37 @@ h1, h2, h3, h4, h5 {
 
 .presentacion {
   text-align: center;
-  background: #f8f9fa;
+  background: #d7e3f4;
 }
 
 .abogada {
-  background: #f8f9fa;
+  background: #d7e3f4;
 }
 .abogada .abogada_matricula {
   font-weight: 700;
-  color: #0a162f;
+  color: rgba(88, 95, 102, 0.6);
 }
 
 .especialidades {
-  background: #f8f9fa;
+  background: #d7e3f4;
 }
 
 .equipo {
-  background: #f8f9fa;
+  background: #d7e3f4;
 }
 
 .estudio {
-  background: #f8f9fa;
+  background: #d7e3f4;
 }
 
 .contacto {
-  background: #f8f9fa;
+  background: #d7e3f4;
   text-align: center;
 }
 
 .footer {
-  background: #0a162f;
-  color: #f8f9fa;
+  background: #1e4fb2;
+  color: #d7e3f4;
   padding: 1rem 0;
   text-align: center;
 }
@@ -126,21 +136,21 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-primary {
-  background-color: #0a162f;
-  border-color: #0a162f;
+  background-color: #1e4fb2;
+  border-color: #1e4fb2;
 }
 .btn-primary:hover {
-  background-color: rgb(1.0526315789, 2.3157894737, 4.9473684211);
-  border-color: rgb(1.0526315789, 2.3157894737, 4.9473684211);
+  background-color: rgb(22.6442307692, 59.6298076923, 134.3557692308);
+  border-color: rgb(22.6442307692, 59.6298076923, 134.3557692308);
 }
 
 .btn-outline-light {
-  border-color: #f8f9fa;
-  color: #f8f9fa;
+  border-color: #d7e3f4;
+  color: #d7e3f4;
 }
 .btn-outline-light:hover {
-  background-color: #f8f9fa;
-  color: #0a162f;
+  background-color: #d7e3f4;
+  color: #1e4fb2;
 }
 
 form {
@@ -198,6 +208,15 @@ section h2::before {
 
 section h2::after {
   bottom: 0px;
+}
+
+.seccionDra {
+  margin-bottom: 0.5rem !important;
+}
+
+.seccionDra::before,
+.seccionDra::after {
+  display: none !important;
 }
 
 /* Altura del navbar (ajustable si cambiás el logo) */
