@@ -14,10 +14,9 @@ img {
 
 body {
   font-family: "Lato", sans-serif;
-  background-color: #f8f9fa;
+  background-color: #d7e3f4;
   color: #1a1a1a;
   line-height: 1.5;
-  text-align: justify;
 }
 
 h1, h2, h3, h4, h5 {
@@ -25,43 +24,50 @@ h1, h2, h3, h4, h5 {
 }
 
 .navbar {
-  background-color: #0a162f !important;
+  background-color: #1e4fb2 !important;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
   font-weight: 700;
-  color: #f8f9fa;
+  color: #d7e3f4;
 }
-
 .navbar-brand img {
-  height: 80px;
+  height: 100px;
+  width: 140px;
   margin-right: 0.5rem;
 }
 
 .nav-link {
-  color: #f8f9fa;
+  color: #d7e3f4;
   opacity: 0.9;
   transition: 0.3s;
+  font-size: 1.2rem;
 }
-
 .nav-link:hover {
   opacity: 1;
 }
 
+@media (max-width: 576px) {
+  .hero {
+    background-position: center 35%;
+    min-height: 60vh;
+  }
+}
 .hero {
   position: relative;
   background: url("../medios/estudio-juridico.jpg") center/cover no-repeat;
   background-position: center 15%;
-  color: #f8f9fa;
+  color: #d7e3f4;
   min-height: 80vh;
   display: flex;
   align-items: center;
   text-align: center;
   margin-bottom: 3rem;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
-
 .hero::after {
   content: "";
   position: absolute;
@@ -69,50 +75,192 @@ h1, h2, h3, h4, h5 {
   z-index: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.55) 35%, rgba(0, 0, 0, 0.35) 100%);
 }
-
 .hero .container {
   position: relative;
   z-index: 1;
 }
-
 .hero h1, .hero h2 {
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .presentacion {
   text-align: center;
-  background: #f8f9fa;
+  background: #d7e3f4;
 }
 
 .abogada {
-  background: #f8f9fa;
+  background: #d7e3f4;
 }
-
 .abogada .abogada_matricula {
   font-weight: 700;
-  color: #0a162f;
+  color: rgba(88, 95, 102, 0.6);
 }
 
 .especialidades {
-  background: #f8f9fa;
+  background: #d7e3f4;
 }
 
 .equipo {
-  background: #f8f9fa;
+  background: #d7e3f4;
 }
 
 .estudio {
-  background: #f8f9fa;
+  background: #d7e3f4;
 }
 
 .contacto {
-  background: #f8f9fa;
+  background: #d7e3f4;
   text-align: center;
 }
 
+.blog {
+  padding: 4rem 1rem;
+  background-color: #d7e3f4;
+  text-align: center;
+}
+.blog h2 {
+  margin-bottom: 3rem;
+  display: inline-block;
+}
+
+/*GRID de cards*/
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/*Card*/
+.blog-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+.blog-card:hover .blog-image {
+  transform: scale(1.05);
+}
+
+/*IMG*/
+.blog-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+.blog-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/*Fecha*/
+.blog-date {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+/*Contenido*/
+.blog-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.blog-content h3 {
+  margin-bottom: 1rem;
+}
+
+/*Texto*/
+.blog-resumen {
+  line-height: 1.6;
+}
+
+.blog-full {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+/*Cuando se abre la informacion*/
+.blog-card.open .blog-full {
+  max-height: 300px;
+  opacity: 1;
+}
+
+/*Boton*/
+.blog-toggle {
+  margin-top: auto;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #1e4fb2;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.blog-toggle:hover {
+  color: #163a85;
+  text-decoration: underline;
+}
+
+/*Disclaimer*/
+.blog-disclaimer {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+  .blog {
+    padding: 3rem 1rem;
+  }
+  .blog-image {
+    height: 150px;
+  }
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .blog-content h3 {
+    font-size: 1.2rem;
+  }
+  .blog-resumen, .blog-full {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .blog-toggle {
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+}
 .footer {
-  background: #0a162f;
-  color: #f8f9fa;
+  background: #1e4fb2;
+  color: #d7e3f4;
   padding: 1rem 0;
   text-align: center;
 }
@@ -127,43 +275,38 @@ h1, h2, h3, h4, h5 {
   transition: 0.3s;
   cursor: default;
 }
-
 .especialidad-card:hover {
   border-color: #c5a059;
   color: #c5a059;
 }
 
 .btn-primary {
-  background-color: #0a162f;
-  border-color: #0a162f;
+  background-color: #1e4fb2;
+  border-color: #1e4fb2;
 }
-
 .btn-primary:hover {
-  background-color: rgb(1.0526315789, 2.3157894737, 4.9473684211);
-  border-color: rgb(1.0526315789, 2.3157894737, 4.9473684211);
+  background-color: rgb(22.6442307692, 59.6298076923, 134.3557692308);
+  border-color: rgb(22.6442307692, 59.6298076923, 134.3557692308);
 }
 
 .btn-outline-light {
-  border-color: #f8f9fa;
-  color: #f8f9fa;
+  border-color: #d7e3f4;
+  color: #d7e3f4;
 }
-
 .btn-outline-light:hover {
-  background-color: #f8f9fa;
-  color: #0a162f;
+  background-color: #d7e3f4;
+  color: #1e4fb2;
 }
 
 form {
   max-width: 600px;
   margin: 0 auto;
 }
-
 form .form-control {
   border-radius: 0.4rem;
   box-shadow: none;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-
 form button {
   margin-top: 1rem;
 }
@@ -181,7 +324,6 @@ form button {
   align-items: center;
   justify-content: center;
 }
-
 .btn-wsp img {
   width: 35px;
 }
@@ -213,6 +355,15 @@ section h2::after {
   bottom: 0px;
 }
 
+.seccionDra {
+  margin-bottom: 0.5rem !important;
+}
+
+.seccionDra::before,
+.seccionDra::after {
+  display: none !important;
+}
+
 /* Altura del navbar (ajustable si cambiás el logo) */
 :root {
   --nav-height: 110px;
@@ -231,6 +382,4 @@ html {
   :root {
     --nav-height: 90px;
   }
-} 
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
