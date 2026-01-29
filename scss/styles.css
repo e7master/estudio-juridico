@@ -343,7 +343,7 @@ section h2::after {
   left: 50%;
   width: 180px;
   height: 4px;
-  background-color: #c5a059;
+  background-color: #1e4fb2 !important;
   transform: translateX(-50%);
 }
 

@@ -13,7 +13,7 @@ section h2::after {
   left: 50%;
   width: 180px;
   height: 4px;
-  background-color: $color-secundario; // lo tenés en variables
+  background-color: $color-primario !important;
   transform: translateX(-50%);
 }
 
