@@ -1,15 +1,61 @@
 .especialidad-card{
     background: $blanco;
-    padding: 1.2rem;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-radius: .5rem;
-    font-weight: 600;
-    transition: .3s;
-    cursor: default;
+    padding: 1.5rem;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover{
-        border-color: $color-secundario;
-        color: $color-secundario;
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+}
+
+/*titulo*/
+.especialidad-card h3{
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+    color: $color-primario;
+    border-bottom: 2px solid $color-primario;
+}
+
+/*texto*/
+.especialidad-card p{
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0;
+}
+
+/*responsive*/
+@media (max-width: 768px){
+    .especialidad-card {
+        padding: 1.3rem;
+    }
+    .especialidad-card p{
+        font-size: 0.88rem;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 576px){
+    .especialidad-card {
+        padding: 1.2rem;
+    }
+    .especialidad-card h3{
+        font-size: 1rem;
+    }
+    .especialidad-card p{
+        font-size: 0.85rem;
+        line-height: 1.45;
     }
 }

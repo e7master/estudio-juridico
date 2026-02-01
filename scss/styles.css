@@ -267,19 +267,60 @@ h1, h2, h3, h4, h5 {
 
 .especialidad-card {
   background: #ffffff;
-  padding: 1.2rem;
-  text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: 0.3s;
-  cursor: default;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .especialidad-card:hover {
-  border-color: #c5a059;
-  color: #c5a059;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
+/*titulo*/
+.especialidad-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  color: #1e4fb2;
+  border-bottom: 2px solid #1e4fb2;
+}
+
+/*texto*/
+.especialidad-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+
+/*responsive*/
+@media (max-width: 768px) {
+  .especialidad-card {
+    padding: 1.3rem;
+  }
+  .especialidad-card p {
+    font-size: 0.88rem;
+  }
+}
+/*Mobile*/
+@media (max-width: 576px) {
+  .especialidad-card {
+    padding: 1.2rem;
+  }
+  .especialidad-card h3 {
+    font-size: 1rem;
+  }
+  .especialidad-card p {
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+}
 .btn-primary {
   background-color: #1e4fb2;
   border-color: #1e4fb2;
@@ -296,6 +337,26 @@ h1, h2, h3, h4, h5 {
 .btn-outline-light:hover {
   background-color: #d7e3f4;
   color: #1e4fb2;
+}
+
+.btn-consultar {
+  margin-top: auto;
+  align-self: center;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin-top: 1rem;
+  background-color: #1e4fb2;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background color 0.3s ease, transform 0.3s ease;
+}
+.btn-consultar:hover {
+  background-color: rgb(24.1153846154, 63.5038461538, 143.0846153846);
+  transform: translateY(-2px);
+  color: #ffffff;
 }
 
 form {
