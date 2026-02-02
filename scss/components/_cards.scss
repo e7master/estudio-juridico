@@ -1,15 +1,12 @@
 .especialidad-card{
     background: $blanco;
     padding: 1.5rem;
-    height: 100%;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover{
@@ -29,11 +26,110 @@
 }
 
 /*texto*/
-.especialidad-card p{
+.especialidad-card > p{
     font-size: 0.9rem;
     line-height: 1.5;
     color: #555;
     margin: 0;
+    text-align: justify;
+}
+
+.lista-servicios{
+    margin-top: 0.8rem;
+    padding-left: 1rem;
+    font-size: 0.85rem;
+    color: #555;
+
+    li{
+        margin-bottom: 0.4rem;
+        line-height: 1.4;
+    }
+
+    strong{
+        color: $color-primario;
+        font-weight: 600;
+    }
+}
+
+.servicio-item{
+    margin-bottom: 0.6rem;
+}
+
+.servicio-toggle{
+    background: #f8f9fa;
+    padding: 0.7rem 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $color-primario;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    span{
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+    }
+}
+
+.servicio-content{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 
+        max-height 0.6s ease, 
+        opacity 0.4s ease;
+    padding: 0 0.8rem;
+
+    p{
+        font-size: 0.82rem;
+        color: #555;
+        margin-bottom: 0.6rem;
+    }
+}
+
+.servicio-item.open .servicio-toggle{
+    background: rgba($color-primario, 0.08);
+}
+
+.servicio-item.open .servicio-toggle span{
+    transform: rotate(45deg);
+}
+
+.especialidad-icono{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+
+    img{
+        width: 85px;
+        height: 85px;
+        padding: 0.8rem;
+        background: rgba($color-primario, 0.08);
+        border-radius: 14px;
+
+        object-fit: contain;
+        display: block;
+        padding: 0;
+    }
+}
+
+.icono-svg{
+    width: 80px;
+    height: 80px;
+    color: $color-primario;
+}
+
+.card-header{
+    margin-bottom: 1rem;
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+.familia-servicios{
+    margin-top: 1rem;
 }
 
 /*responsive*/
