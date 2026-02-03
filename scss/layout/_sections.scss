@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *; 
+
 .presentacion{
     text-align: center;
     background: $light;

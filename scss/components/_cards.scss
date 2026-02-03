@@ -1,4 +1,7 @@
+@use '../abstracts/variables' as *;
+
 .especialidad-card{
+    font-family: 'Inter', sans-serif;
     background: $blanco;
     padding: 1.5rem;
 
@@ -17,20 +20,24 @@
 
 /*titulo*/
 .especialidad-card h3{
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
     margin-bottom: 0.75rem;
     padding-bottom: 0.4rem;
     color: $color-primario;
     border-bottom: 2px solid $color-primario;
+    color: $color-primario;
 }
 
 /*texto*/
 .especialidad-card > p{
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #555;
-    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1rem;
     text-align: justify;
 }
 
@@ -60,16 +67,21 @@
     padding: 0.7rem 0.9rem;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
     color: $color-primario;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 1rem;
+    line-height: 1.4;
     
     span{
-        font-size: 1.2rem;
+        font-weight: 600;
+        font-size: 1.1rem;
         transition: transform 0.3s ease;
+        flex-shrink: 0;
     }
 }
 
@@ -83,9 +95,10 @@
     padding: 0 0.8rem;
 
     p{
-        font-size: 0.82rem;
+        font-size: 0.9rem;
+        line-height: 1.6;
         color: #555;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.8rem;
     }
 }
 
@@ -95,6 +108,28 @@
 
 .servicio-item.open .servicio-toggle span{
     transform: rotate(45deg);
+}
+
+.servicio-lista{
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0 1.5rem;
+
+    li{
+        position: relative;
+        padding-left: 1.6rem;
+        margin-bottom: 0.6rem;
+        line-height: 1.4;
+        color: #333;
+    }
+}
+
+.servicio-lista li::before{
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: $color-primario;
+    font-weight: bold;
 }
 
 .especialidad-icono{
@@ -130,6 +165,7 @@
 
 .familia-servicios{
     margin-top: 1rem;
+    text-align: justify;
 }
 
 /*responsive*/

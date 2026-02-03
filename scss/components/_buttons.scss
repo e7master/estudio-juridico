@@ -1,10 +1,13 @@
+@use 'sass:color';
+@use '../abstracts/variables' as *;
+
 .btn-primary{
     background-color: $color-primario;
     border-color: $color-primario;
 
     &:hover{
-        background-color: darken($color-primario, 10%);
-        border-color: darken($color-primario, 10%);
+        background-color: color.adjust($color-primario, $lightness: -10%);
+        border-color: color.adjust($color-primario, $lightness: -10%);
     }
 }
 
@@ -24,7 +27,7 @@
     align-self: center;
 
     display: inline-block;
-    padding: 0.5rem 1.2rem;
+    padding: 0.55rem 1.4rem;
     margin-top: 1rem;
 
     background-color: $color-primario;
@@ -33,7 +36,7 @@
     font-weight: 500;
     text-decoration: none;
 
-    border-radius: 20px;
+    border-radius: 999px;
     transition: background color 0.3s ease, transform 0.3s ease;
 
     &:hover{

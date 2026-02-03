@@ -1,23 +1,23 @@
 //Variables + mixins
-@import './abstracts/variables';
-@import './abstracts/mixins';
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
 
 //Base
-@import './base/reset';
-@import './base/global';
-@import './base/typography';
+@use './base/reset' as *;
+@use './base/global' as *;
+@use './base/typography' as *;
 
 //Layout
-@import './layout/navbar';
-@import './layout/hero';
-@import './layout/sections';
-@import './layout/blog';
-@import './layout/footer';
+@use './layout/navbar' as *;
+@use './layout/hero' as *;
+@use './layout/sections' as *;
+@use './layout/blog' as *;
+@use './layout/footer' as *;
 
 //Componentes
-@import './components/cards';
-@import './components/buttons';
-@import './components/forms';
-@import './components/whatsapp';
+@use './components/cards' as *;
+@use './components/buttons' as *;
+@use './components/forms' as *;
+@use './components/whatsapp' as *;
 
-@import './utils/decor';
+@use './utils/decor' as *;
