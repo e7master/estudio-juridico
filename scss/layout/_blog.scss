@@ -84,6 +84,7 @@
 /*Texto*/
 .blog-resumen{
     line-height: 1.6;
+    text-align: justify;
 }
 
 .blog-full{
@@ -93,12 +94,7 @@
     transition: max-height 0.4s ease, opacity 0.3s ease;
     line-height: 1.6;
     margin-top: 0.5rem;
-}
-
-/*Cuando se abre la informacion*/
-.blog-card.open .blog-full{
-    max-height: 300px;
-    opacity: 1;
+    text-align: justify;
 }
 
 /*Boton*/

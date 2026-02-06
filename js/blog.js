@@ -1,23 +1,33 @@
-document.querySelectorAll(".blog-toggle").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const card = btn.closest(".blog-card");
-        const isOpen =card.classList.contains("open");
+document.querySelectorAll(".blog-toggle").forEach(button => {
 
-        // Cerrar demas cards
-        document.querySelectorAll(".blog-card").forEach(c => {
-            c.classList.remove("open");
-            c.querySelector(".blog-toggle").textContent = "Leer más";
-        });
+    button.addEventListener("click", function(){
 
-        // Abrir solo clickeada
-        if (!isOpen) {
-            card.classList.add("open");
-            btn.textContent = "Leer menos"
-            
-            card.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+        const fullText = this.parentElement.querySelector(".blog-full");
+
+        const isOpen = fullText.classList.contains("active");
+
+        if(isOpen){
+
+            fullText.style.maxHeight = fullText.scrollHeight + "px";
+
+            requestAnimationFrame(() => {
+                fullText.style.maxHeight = "0px";
+                fullText.style.opacity = "0";
             });
+
+            fullText.classList.remove("active");
+            this.textContent = "Leer más";
+
+        } else {
+
+            fullText.style.maxHeight = fullText.scrollHeight + "px";
+            fullText.style.opacity = "1";
+
+            fullText.classList.add("active");
+            this.textContent = "Leer menos";
+
         }
+
     });
+
 });

@@ -17,9 +17,36 @@
 .especialidades{
     background: $light;
 }
-.equipo{
+
+#equipo{
     background: $light;
+    img{
+        width: auto;
+        max-width: 100%;
+        max-height: 500px;
+        object-fit: contain;
+        margin: 0 auto 1rem;
+        display: block;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+    h5{
+        margin-top: 0.3rem;
+        margin-bottom: 0.5rem;
+    }
+    p{
+        margin-top: 0;
+        text-align: justify;
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
+
+.equipo img:hover{
+    transform: scale(1.05);
+}
+
 .estudio{
     background: $light;
 }
@@ -27,4 +54,10 @@
 .contacto{
     background: $light;
     text-align: center;
+}
+
+@media (max-width: 768px){
+    #equipo img{
+        max-height: 140px;
+    }
 }
